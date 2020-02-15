@@ -57,8 +57,9 @@
                 width: 150px;
                 height: 200px;
                 border-radius: 50%;
+                box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
                 &:hover {
-                    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+                    box-shadow: rgba(0, 0, 0, 0.8) 0px 10px 20px, inset rgba(0, 0, 0, 0.15) 2px -15px 25px;
                 }
             }
             .nav-grid {
