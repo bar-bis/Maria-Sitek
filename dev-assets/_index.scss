@@ -1,0 +1,99 @@
+    //Nawigacja
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 20%;
+        background-color: $nav-color;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+        h1 {
+            text-align: center;
+            font-size: $font-size-1;
+            font-style: italic;
+            transition: ease-in-out 300ms;
+            &:hover {
+                transform: scale(1.2);
+                color: $hover-color;
+            }
+        }
+    }
+    
+    li a {
+        display: block;
+        color: $text;
+        padding: 8px 16px;
+        text-decoration: none;
+        font-size: $font-size-3;
+        &:active,
+        &:focus {
+            background: $main-gradient;
+            color: $text;
+        }
+        &:hover {
+            background-color: $hover-color;
+            color: $text;
+        }
+    }
+    
+    .my-photo {
+        margin-top: 20px;
+        margin-left: 2vw;
+        width: 250px;
+        height: 300px;
+        border-radius: 50%;
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+        }
+    }
+    
+    //O mnie
+    .container {
+        display: flex;
+        position: relative;
+    }
+    
+    .about {
+        margin-top: 20px;
+        h2 {
+            font-size: $font-size-1;
+            font-style: italic;
+        }
+    }
+    
+    .fab {
+        padding: 8px;
+        background-color: $hover-color;
+        color: $text;
+        transition: ease-in-out 300ms;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    /* Folio */
+    
+    .examples {
+        margin-top: 50px;
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        text-align: center;
+    }
+    
+    .name {
+        text-transform: uppercase;
+        color: $text;
+        text-decoration: none;
+    }
+    
+    .img-p {
+        width: 250px;
+        height: auto;
+        &:hover {
+            -webkit-transform: rotate(-7deg);
+            -moz-transform: rotate(-7deg);
+            -o-transform: rotate(-7deg);
+            transform: rotate(-7deg);
+        }
+    }
