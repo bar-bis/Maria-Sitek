@@ -11,7 +11,7 @@
         .my-photo {
             display: none;
         }
-        h1 {
+        h2 {
             display: none;
         }
         @include for-phone-only {
@@ -26,7 +26,7 @@
             .my-photo {
                 display: none;
             }
-            h1 {
+            h2 {
                 display: none;
             }
         }
@@ -54,7 +54,6 @@
                 display: flex;
                 justify-content: center;
                 margin-top: 20px;
-                margin-left: 2vw;
                 width: 150px;
                 height: 200px;
                 border-radius: 50%;
