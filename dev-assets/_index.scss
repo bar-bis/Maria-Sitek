@@ -1,21 +1,48 @@
     //Nawigacja
     ul {
         list-style-type: none;
+        z-index: 15;
         margin: 0;
-        padding: 0;
-        width: 20%;
         background-color: $nav-color;
+        display: flex;
+        left: 0;
         position: fixed;
-        height: 100%;
-        overflow: auto;
+        width: 100%;
+        .my-photo {
+            display: none;
+        }
         h1 {
-            text-align: center;
-            font-size: $font-size-1;
-            font-style: italic;
-            transition: ease-in-out 300ms;
-            &:hover {
-                transform: scale(1.2);
-                color: $hover-color;
+            display: none;
+        }
+        @include for-desktop-up {
+            padding: 0;
+            display: block;
+            width: 20%;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+            h1 {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                font-size: $font-size-1;
+                font-style: italic;
+                transition: ease-in-out 300ms;
+                &:hover {
+                    transform: scale(1.2);
+                    color: $hover-color;
+                }
+            }
+            .my-photo {
+                display: flex;
+                margin-top: 20px;
+                margin-left: 2vw;
+                width: 250px;
+                height: 300px;
+                border-radius: 50%;
+                &:hover {
+                    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+                }
             }
         }
     }
@@ -37,21 +64,13 @@
         }
     }
     
-    .my-photo {
-        margin-top: 20px;
-        margin-left: 2vw;
-        width: 250px;
-        height: 300px;
-        border-radius: 50%;
-        &:hover {
-            box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
-        }
-    }
-    
     //O mnie
     .container {
         display: flex;
         position: relative;
+        @include for-desktop-up {
+            margin-left: 25%;
+        }
     }
     
     .about {
@@ -79,6 +98,9 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         text-align: center;
+        @include for-desktop-up {
+            margin-left: 25%;
+        }
     }
     
     .name {
@@ -95,5 +117,35 @@
             -moz-transform: rotate(-7deg);
             -o-transform: rotate(-7deg);
             transform: rotate(-7deg);
+        }
+    }
+    
+    //For mobile
+    .for-mobile {
+        display: block;
+        position: relative;
+        flex-direction: column;
+        max-width: 100vw;
+        img {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .my-photo {
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            margin-left: 2vw;
+            width: 250px;
+            height: 300px;
+            border-radius: 50%;
+        }
+        h1 {
+            text-align: center;
+            font-size: $font-size-1;
+            font-style: italic;
+        }
+        @include for-desktop-up {
+            display: none;
         }
     }
