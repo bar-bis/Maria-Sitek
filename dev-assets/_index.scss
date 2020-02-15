@@ -172,4 +172,7 @@
     //CV
     .cv {
         margin-bottom: 20px;
+        @include for-phone-only {
+            display: none;
+        }
     }
