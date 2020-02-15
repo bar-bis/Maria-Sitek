@@ -3,7 +3,7 @@
         list-style-type: none;
         z-index: 100;
         margin: 0;
-        background-color: $nav-color;
+        background-color: $hover-color;
         display: flex;
         left: 0;
         position: fixed;
@@ -18,7 +18,7 @@
             list-style-type: none;
             z-index: 100;
             margin: 0;
-            background-color: $nav-color;
+            background-color: $hover-color;
             display: flex;
             left: 0;
             position: fixed;
@@ -52,10 +52,11 @@
             }
             .my-photo {
                 display: flex;
+                justify-content: center;
                 margin-top: 20px;
                 margin-left: 2vw;
-                width: 250px;
-                height: 300px;
+                width: 150px;
+                height: 200px;
                 border-radius: 50%;
                 &:hover {
                     box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
