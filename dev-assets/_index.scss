@@ -1,7 +1,7 @@
     //Nawigacja
     ul {
         list-style-type: none;
-        z-index: 15;
+        z-index: 100;
         margin: 0;
         background-color: $nav-color;
         display: flex;
@@ -13,6 +13,22 @@
         }
         h1 {
             display: none;
+        }
+        @include for-phone-only {
+            list-style-type: none;
+            z-index: 100;
+            margin: 0;
+            background-color: $nav-color;
+            display: flex;
+            left: 0;
+            position: fixed;
+            width: 100%;
+            .my-photo {
+                display: none;
+            }
+            h1 {
+                display: none;
+            }
         }
         @include for-desktop-up {
             padding: 0;
