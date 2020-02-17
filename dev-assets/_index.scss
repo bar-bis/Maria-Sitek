@@ -3,7 +3,7 @@
         list-style-type: none;
         z-index: 100;
         margin: 0;
-        background-color: $hover-color;
+        background: $accent-color;
         display: flex;
         left: 0;
         position: fixed;
@@ -37,8 +37,9 @@
             position: fixed;
             height: 100%;
             overflow: auto;
-            border-right: 2px solid $hover-color;
+            // border-right: 5px solid $hover-color;
             h2 {
+                color: $bg-color;
                 display: flex;
                 text-align: center;
                 justify-content: center;
@@ -47,7 +48,7 @@
                 transition: ease-in-out 300ms;
                 &:hover {
                     transform: scale(1.2);
-                    color: $text;
+                    color: $bg-color;
                 }
             }
             .my-photo {
@@ -72,7 +73,7 @@
                     &:hover {
                         transform: scale(1.2);
                         background-color: $text;
-                        color: $hover-color;
+                        color: $bg-color;
                     }
                 }
             }
@@ -87,7 +88,7 @@
         font-size: $font-size-3;
         &:hover {
             background-color: $text;
-            color: $hover-color;
+            color: $bg-color;
         }
     }
     
@@ -111,7 +112,7 @@
     .fab {
         padding: 8px;
         margin-right: 2px;
-        background-color: $hover-color;
+        background-color: $bg-color;
         color: $text;
         transition: ease-in-out 300ms;
         border-radius: 50%;
