@@ -4,7 +4,7 @@
         z-index: 100;
         margin: 0;
         background: $accent-color;
-        display: flex;
+        display: inline-block;
         left: 0;
         position: fixed;
         width: 100%;
@@ -18,8 +18,8 @@
             list-style-type: none;
             z-index: 100;
             margin: 0;
-            background-color: $hover-color;
-            display: flex;
+            background-color: $accent-color;
+            display: inline-block;
             left: 0;
             position: fixed;
             width: 100%;
