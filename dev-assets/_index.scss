@@ -4,7 +4,7 @@
         z-index: 100;
         margin: 0;
         background: $accent-color;
-        display: inline-block;
+        display: flex;
         left: 0;
         position: fixed;
         width: 100%;
@@ -14,12 +14,15 @@
         h2 {
             display: none;
         }
+        .fab {
+            display: none;
+        }
         @include for-phone-only {
             list-style-type: none;
             z-index: 100;
             margin: 0;
             background-color: $accent-color;
-            display: inline-block;
+            display: flex;
             left: 0;
             position: fixed;
             width: 100%;
@@ -27,6 +30,9 @@
                 display: none;
             }
             h2 {
+                display: none;
+            }
+            .fab {
                 display: none;
             }
         }
@@ -83,7 +89,7 @@
     li a {
         display: block;
         color: $text;
-        padding: 8px 16px;
+        padding: 8px 10px;
         text-decoration: none;
         font-size: $font-size-3;
         &:hover {
@@ -156,6 +162,7 @@
         position: relative;
         flex-direction: column;
         max-width: 100vw;
+        justify-content: center;
         img {
             justify-content: center;
             align-items: center;
@@ -174,6 +181,17 @@
             text-align: center;
             font-size: $font-size-1;
             font-style: italic;
+        }
+        .fab {
+            padding: 8px;
+            margin-right: 2px;
+            background-color: $bg-color;
+            color: $text;
+            transition: ease-in-out 300ms;
+            border-radius: 50%;
+            &:hover {
+                transform: scale(1.2);
+            }
         }
         @include for-desktop-up {
             display: none;
