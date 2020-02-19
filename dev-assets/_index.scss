@@ -115,15 +115,17 @@
         }
     }
     
-    .fab {
-        padding: 8px;
-        margin-right: 2px;
-        background-color: $bg-color;
-        color: $text;
-        transition: ease-in-out 300ms;
-        border-radius: 50%;
-        &:hover {
-            transform: scale(1.2);
+    .contact-nav {
+        @include for-desktop-up {
+            padding: 8px;
+            margin-right: 2px;
+            background-color: $bg-color;
+            color: $text;
+            transition: ease-in-out 300ms;
+            border-radius: 50%;
+            &:hover {
+                transform: scale(1.2);
+            }
         }
     }
     /* Folio */
@@ -182,7 +184,7 @@
             font-size: $font-size-1;
             font-style: italic;
         }
-        .fab {
+        .contact-main {
             padding: 8px;
             margin-right: 2px;
             background-color: $bg-color;
@@ -194,14 +196,6 @@
             }
         }
         @include for-desktop-up {
-            display: none;
-        }
-    }
-    
-    //CV
-    .cv {
-        margin-bottom: 20px;
-        @include for-phone-only {
             display: none;
         }
     }
